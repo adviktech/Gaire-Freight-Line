@@ -103,7 +103,7 @@ export default function ContactUsPage() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <GaireNavbar />
-
+      ha how u like that
       {/* Hero Section */}
       <section className="px-4 py-16 bg-gradient-to-r from-green-50 to-blue-50">
         <div className="container mx-auto text-center">
@@ -116,7 +116,6 @@ export default function ContactUsPage() {
           </p>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="px-4 py-16">
         <div className="container mx-auto">
@@ -139,7 +138,6 @@ export default function ContactUsPage() {
           </div>
         </div>
       </section>
-
       {/* Contact Form */}
       <section className="px-4 py-16 bg-gray-50">
         <div className="container mx-auto">
@@ -285,7 +283,6 @@ export default function ContactUsPage() {
           </div>
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="px-4 py-16">
         <div className="container mx-auto">
@@ -335,7 +332,6 @@ export default function ContactUsPage() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="bg-gray-900 text-white px-4 py-12">
         <div className="container mx-auto">
