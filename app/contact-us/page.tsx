@@ -103,7 +103,7 @@ export default function ContactUsPage() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <GaireNavbar />
-      ha how u like that
+
       {/* Hero Section */}
       <section className="px-4 py-16 bg-gradient-to-r from-green-50 to-blue-50">
         <div className="container mx-auto text-center">
