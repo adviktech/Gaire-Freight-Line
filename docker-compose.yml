@@ -1,0 +1,13 @@
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    restart: unless-stopped
+    # Add this for debugging
+    command: sh -c "ls -la && ls -la .next/ && node server.js"
+    # Or keep container running to inspect
+    # command: tail -f /dev/null

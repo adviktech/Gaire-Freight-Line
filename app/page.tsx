@@ -18,6 +18,7 @@ import {
 // Update if using a different Card component
 import { Bar, Line } from "react-chartjs-2";
 import Geometry from "@/public/geometry.svg";
+import GreenAvatar from "@/public/green-avatar.svg";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -65,24 +66,24 @@ const values = [
     description:
       "Time is money in logistics. We optimize every route and process to ensure maximum efficiency and cost-effectiveness.",
   },
-  {
-    icon: Users,
-    title: "Customer Focus",
-    description:
-      "Our clients' success is our success. We go above and beyond to understand and meet their unique shipping needs.",
-  },
+  // {
+  //   icon: Users,
+  //   title: "Customer Focus",
+  //   description:
+  //     "Our clients' success is our success. We go above and beyond to understand and meet their unique shipping needs.",
+  // },
   {
     icon: Award,
     title: "Excellence",
     description:
       "We maintain the highest standards in everything we do, from cargo handling to customer service delivery.",
   },
-  {
-    icon: Globe,
-    title: "Innovation",
-    description:
-      "We embrace cutting-edge technology and innovative solutions to stay ahead in the rapidly evolving logistics industry.",
-  },
+  // {
+  //   icon: Globe,
+  //   title: "Innovation",
+  //   description:
+  //     "We embrace cutting-edge technology and innovative solutions to stay ahead in the rapidly evolving logistics industry.",
+  // },
   {
     icon: Truck,
     title: "Sustainability",
@@ -183,13 +184,7 @@ export default function HomePage() {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <Image
-                src="/driver.jpg"
-                alt="Mobile app interface"
-                width={300}
-                height={1000}
-                className="mx-auto rounded-lg shadow-lg max-w-full object-cover"
-              />
+              <img src="/driver.jpg" alt="Mobile app interface" />
             </div>
             <div>
               <h2 className="text-4xl font-bold mb-6">
@@ -270,7 +265,7 @@ export default function HomePage() {
             <div>
               <Badge className="bg-green-600 text-white mb-4">OUR VALUES</Badge>
               <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-                Our <br /> Values
+                Our Values
               </h2>
               <p className="text-green-100 mb-8 text-lg leading-relaxed">
                 At Gaire Freight Line, our values aren't just words—they're the
@@ -405,10 +400,10 @@ export default function HomePage() {
             <Card className="p-6">
               <div className="flex items-center mb-4">
                 <Image
-                  src="/placeholder.svg?height=50&width=50"
+                  src={GreenAvatar}
                   alt="Customer"
-                  width={50}
-                  height={50}
+                  width={25}
+                  height={25}
                   className="rounded-full mr-3"
                 />
                 <div>
@@ -433,10 +428,10 @@ export default function HomePage() {
             <Card className="p-6">
               <div className="flex items-center mb-4">
                 <Image
-                  src="/placeholder.svg?height=50&width=50"
+                  src={GreenAvatar}
                   alt="Customer"
-                  width={50}
-                  height={50}
+                  width={25}
+                  height={25}
                   className="rounded-full mr-3"
                 />
                 <div>
@@ -461,10 +456,10 @@ export default function HomePage() {
             <Card className="p-6">
               <div className="flex items-center mb-4">
                 <Image
-                  src="/placeholder.svg?height=50&width=50"
+                  src={GreenAvatar}
                   alt="Customer"
-                  width={50}
-                  height={50}
+                  width={25}
+                  height={25}
                   className="rounded-full mr-3"
                 />
                 <div>
@@ -489,10 +484,10 @@ export default function HomePage() {
             <Card className="p-6">
               <div className="flex items-center mb-4">
                 <Image
-                  src="/placeholder.svg?height=50&width=50"
+                  src={GreenAvatar}
                   alt="Customer"
-                  width={50}
-                  height={50}
+                  width={25}
+                  height={25}
                   className="rounded-full mr-3"
                 />
                 <div>
@@ -517,10 +512,10 @@ export default function HomePage() {
             <Card className="p-6">
               <div className="flex items-center mb-4">
                 <Image
-                  src="/placeholder.svg?height=50&width=50"
+                  src={GreenAvatar}
                   alt="Customer"
-                  width={50}
-                  height={50}
+                  width={25}
+                  height={25}
                   className="rounded-full mr-3"
                 />
                 <div>
@@ -545,10 +540,10 @@ export default function HomePage() {
             <Card className="p-6">
               <div className="flex items-center mb-4">
                 <Image
-                  src="/placeholder.svg?height=50&width=50"
+                  src={GreenAvatar}
                   alt="Customer"
-                  width={50}
-                  height={50}
+                  width={25}
+                  height={25}
                   className="rounded-full mr-3"
                 />
                 <div>
@@ -611,59 +606,29 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white px-4 py-12">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="h-8 w-8 rounded-full bg-green-500"></div>
-                <span className="text-xl font-bold">Gaire Freight Line</span>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Careers
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Terms of Service
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Cookie Policy
-                  </a>
-                </li>
-              </ul>
-            </div>
+        <div className="container mx-auto text-center">
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <div className="h-8 w-8 rounded-full bg-purple-500"></div>
+            <span className="text-xl font-bold">Gaire Freight Line</span>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 Gaire Freight Line. All rights reserved.</p>
+          <p className="text-gray-400 mb-4">
+            Revolutionizing freight operations with AI-powered dispatching
+            solutions
+          </p>
+          <div className="flex justify-center space-x-6 text-sm">
+            <a href="/privacy" className="text-gray-400 hover:text-white">
+              Privacy Policy
+            </a>
+            <a href="/terms" className="text-gray-400 hover:text-white">
+              Terms of Service
+            </a>
+            <a href="/contact-us" className="text-gray-400 hover:text-white">
+              Contact Us
+            </a>
           </div>
+          <p className="text-gray-500 text-sm mt-4">
+            © 2025 Gaire Freight Line. All rights reserved.
+          </p>
         </div>
       </footer>
     </div>
