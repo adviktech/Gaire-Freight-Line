@@ -74,19 +74,19 @@ export default function ContactUsPage() {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
       details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
-      color: "text-blue-500",
+      color: "text-[#459c6d]",
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
       details: ["gairefreightline@gmail.com", "support@gairefreightline.com"],
-      color: "text-green-500",
+      color: "text-[#459c6d]",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Address",
       details: ["123 Freight Avenue", "Logistics City, LC 12345"],
-      color: "text-red-500",
+      color: "text-[#459c6d]",
     },
     {
       icon: <Clock className="w-6 h-6" />,
@@ -95,40 +95,48 @@ export default function ContactUsPage() {
         "Mon - Fri: 6:00 AM - 10:00 PM",
         "Sat - Sun: 8:00 AM - 6:00 PM",
       ],
-      color: "text-purple-500",
+      color: "text-[#459c6d]",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-[#545454]">
       {/* Header */}
       <GaireNavbar />
 
       {/* Hero Section */}
-      <section className="px-4 py-16 bg-gradient-to-r from-green-50 to-blue-50">
+      <section className="px-4 py-16 bg-gradient-to-r from-green-50 to-[#459c6d]/10 dark:from-gray-800 dark:to-[#459c6d]/20">
         <div className="container mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Get in <span className="text-green-500">Touch</span>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 dark:text-white">
+            Get in <span className="text-[#459c6d]">Touch</span>
           </h1>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
             Have questions about our services? Need support with your account?
             Our team is here to help you succeed. Reach out to us today!
           </p>
         </div>
       </section>
       {/* Contact Information */}
-      <section className="px-4 py-16">
+      <section className="px-4 py-16 dark:bg-[#545454]">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {contactInfo.map((info, index) => (
-              <Card key={index} className="p-6 text-center">
+              <Card
+                key={index}
+                className="p-6 text-center hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700"
+              >
                 <div className={`flex justify-center mb-4 ${info.color}`}>
                   {info.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{info.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 dark:text-white">
+                  {info.title}
+                </h3>
                 <div className="space-y-1">
                   {info.details.map((detail, i) => (
-                    <p key={i} className="text-gray-600 text-sm">
+                    <p
+                      key={i}
+                      className="text-gray-600 dark:text-gray-300 text-sm"
+                    >
                       {detail}
                     </p>
                   ))}
@@ -139,12 +147,14 @@ export default function ContactUsPage() {
         </div>
       </section>
       {/* Contact Form */}
-      <section className="px-4 py-16 bg-gray-50">
+      <section className="px-4 py-16 bg-gray-50 dark:bg-gray-700">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-4xl font-bold mb-6">Send us a Message</h2>
-              <p className="text-gray-600 mb-8">
+              <h2 className="text-4xl font-bold mb-6 dark:text-white">
+                Send us a Message
+              </h2>
+              <p className="text-gray-600 dark:text-gray-300 mb-8">
                 Fill out the form below and we'll get back to you within 24
                 hours. Whether you have questions about our services, need
                 technical support, or want to discuss a partnership opportunity,
@@ -153,26 +163,32 @@ export default function ContactUsPage() {
 
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">Quick response time</span>
+                  <CheckCircle className="w-5 h-5 text-[#459c6d]" />
+                  <span className="text-gray-700 dark:text-gray-300">
+                    Quick response time
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">Expert support team</span>
+                  <CheckCircle className="w-5 h-5 text-[#459c6d]" />
+                  <span className="text-gray-700 dark:text-gray-300">
+                    Expert support team
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">Personalized solutions</span>
+                  <CheckCircle className="w-5 h-5 text-[#459c6d]" />
+                  <span className="text-gray-700 dark:text-gray-300">
+                    Personalized solutions
+                  </span>
                 </div>
               </div>
             </div>
 
-            <Card className="p-8">
+            <Card className="p-8 shadow-lg dark:bg-gray-800 dark:border-gray-700">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Label
                     htmlFor="name"
-                    className="text-sm font-medium text-gray-700"
+                    className="text-sm font-medium text-gray-700 dark:text-gray-300"
                   >
                     Full Name *
                   </Label>
@@ -183,7 +199,7 @@ export default function ContactUsPage() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="mt-1"
+                    className="mt-1 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -191,7 +207,7 @@ export default function ContactUsPage() {
                 <div>
                   <Label
                     htmlFor="email"
-                    className="text-sm font-medium text-gray-700"
+                    className="text-sm font-medium text-gray-700 dark:text-gray-300"
                   >
                     Email Address *
                   </Label>
@@ -202,7 +218,7 @@ export default function ContactUsPage() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="mt-1"
+                    className="mt-1 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                     placeholder="Enter your email address"
                   />
                 </div>
@@ -210,7 +226,7 @@ export default function ContactUsPage() {
                 <div>
                   <Label
                     htmlFor="subject"
-                    className="text-sm font-medium text-gray-700"
+                    className="text-sm font-medium text-gray-700 dark:text-gray-300"
                   >
                     Subject
                   </Label>
@@ -220,7 +236,7 @@ export default function ContactUsPage() {
                     type="text"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className="mt-1"
+                    className="mt-1 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                     placeholder="What's this about?"
                   />
                 </div>
@@ -228,7 +244,7 @@ export default function ContactUsPage() {
                 <div>
                   <Label
                     htmlFor="message"
-                    className="text-sm font-medium text-gray-700"
+                    className="text-sm font-medium text-gray-700 dark:text-gray-300"
                   >
                     Message *
                   </Label>
@@ -239,13 +255,13 @@ export default function ContactUsPage() {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className="mt-1"
+                    className="mt-1 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                     placeholder="Tell us how we can help you..."
                   />
                 </div>
 
                 {submitStatus === "success" && (
-                  <div className="flex items-center space-x-2 text-green-600 bg-green-50 p-3 rounded-lg">
+                  <div className="flex items-center space-x-2 text-green-600 bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
                     <CheckCircle className="w-5 h-5" />
                     <span className="text-sm">
                       Your default email client should open now. Please send the
@@ -255,7 +271,7 @@ export default function ContactUsPage() {
                 )}
 
                 {submitStatus === "error" && (
-                  <div className="flex items-center space-x-2 text-red-600 bg-red-50 p-3 rounded-lg">
+                  <div className="flex items-center space-x-2 text-red-600 bg-red-50 dark:bg-red-900/20 p-3 rounded-lg">
                     <AlertCircle className="w-5 h-5" />
                     <span className="text-sm">
                       There was an error opening your email client. Please try
@@ -267,7 +283,7 @@ export default function ContactUsPage() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-green-600 hover:bg-green-700 text-white"
+                  className="w-full bg-[#459c6d] hover:bg-[#3a8359] text-white"
                 >
                   {isSubmitting ? (
                     "Opening Email Client..."
@@ -284,46 +300,46 @@ export default function ContactUsPage() {
         </div>
       </section>
       {/* FAQ Section */}
-      <section className="px-4 py-16">
+      <section className="px-4 py-16 dark:bg-[#545454]">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">
+          <h2 className="text-4xl font-bold text-center mb-12 dark:text-white">
             Frequently Asked Questions
           </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold mb-3">
+            <Card className="p-6 hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700">
+              <h3 className="text-lg font-semibold mb-3 dark:text-white">
                 How quickly can I get started?
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
                 Most customers can be onboarded within 24-48 hours. Our team
                 will guide you through the setup process and provide training.
               </p>
             </Card>
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold mb-3">
+            <Card className="p-6 hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700">
+              <h3 className="text-lg font-semibold mb-3 dark:text-white">
                 What support do you offer?
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
                 We provide 24/7 phone and email support, plus live chat during
                 business hours. Our support team has extensive trucking industry
                 experience.
               </p>
             </Card>
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold mb-3">
+            <Card className="p-6 hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700">
+              <h3 className="text-lg font-semibold mb-3 dark:text-white">
                 Do you offer training?
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
                 Yes! We provide comprehensive training sessions, video
                 tutorials, and ongoing support to ensure you get the most out of
                 our platform.
               </p>
             </Card>
-            <Card className="p-6">
-              <h3 className="text-lg font-semibold mb-3">
+            <Card className="p-6 hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700">
+              <h3 className="text-lg font-semibold mb-3 dark:text-white">
                 Can I cancel anytime?
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
                 Absolutely. We offer month-to-month plans with no long-term
                 contracts. You can cancel or modify your subscription at any
                 time.
@@ -336,7 +352,7 @@ export default function ContactUsPage() {
       <footer className="bg-gray-900 text-white px-4 py-12">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="h-8 w-8 rounded-full bg-purple-500"></div>
+            <div className="h-8 w-8 rounded-full bg-[#459c6d]"></div>
             <span className="text-xl font-bold">Gaire Freight Line</span>
           </div>
           <p className="text-gray-400 mb-4">
