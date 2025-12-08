@@ -73,19 +73,19 @@ export default function ContactUsPage() {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
+      details: ["336 442 1139"],
       color: "text-[#459c6d]",
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      details: ["gairefreightline@gmail.com", "support@gairefreightline.com"],
+      details: ["ops@gairefreight.com"],
       color: "text-[#459c6d]",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Address",
-      details: ["123 Freight Avenue", "Logistics City, LC 12345"],
+      details: ["707  Westchester Av", "Suite 204 High Point", "NC 27265"],
       color: "text-[#459c6d]",
     },
     {
