@@ -70,7 +70,7 @@ export default function AboutUsPage() {
       icon: <Users className="w-8 h-8 text-blue-500" />,
       title: "Community",
       description: "We build strong, long-lasting relationships with drivers, shippers, brokers, and partners, creating a supportive network across the trucking industry."
-      // "Building strong relationships with drivers, fleet owners, and logistics professionals.",
+      
     },
     {
       icon: <Award className="w-8 h-8 text-yellow-500" />,
